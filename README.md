@@ -1,2 +1,1 @@
-# llm-governance-toolkit
-llm-governance-toolkit
+Gergely Vámossy
