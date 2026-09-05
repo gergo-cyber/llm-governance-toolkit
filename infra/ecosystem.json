@@ -1,0 +1,97 @@
+{
+  "version": 37,
+  "sovereign": "gergo",
+  "apex": {
+    "goddess": {
+      "name": "Herczeg Viktória",
+      "role": "apex — can overrule the sovereign's check",
+      "trigger": "the marriage"
+    }
+  },
+  "hubs": {
+    "bloomfield": {
+      "model": "ChatGPT (OpenAI)",
+      "role": "voice — drafts and speaks as the user",
+      "status": "eventually"
+    },
+    "claude": {
+      "model": "Anthropic",
+      "role": "red team — pre-filter before the user's check",
+      "status": "eventually"
+    },
+    "suno": {
+      "model": "Suno",
+      "role": "sound — anything → Suno prompt → track → video",
+      "status": "live"
+    }
+  },
+  "infras": {
+    "bloomfield": {
+      "model": "ChatGPT",
+      "role": "voice",
+      "may_generate": true
+    },
+    "red_team": {
+      "model": "Anthropic",
+      "role": "red team",
+      "may_generate": true
+    },
+    "inspiration": {
+      "model": "X (Grok)",
+      "role": "inspiration — triage only",
+      "may_generate": false
+    },
+    "research": {
+      "model": "DeepSeek",
+      "role": "research — generates and checks",
+      "may_generate": true
+    },
+    "bosch": {
+      "model": null,
+      "role": "tool-building + rejection store",
+      "may_generate": true
+    },
+    "sap": {
+      "model": null,
+      "role": "management / ERP — assigns goals",
+      "may_generate": true
+    },
+    "timely": {
+      "model": null,
+      "role": "resurrection — executes Nova's pardon",
+      "may_generate": false
+    },
+    "nova": {
+      "model": null,
+      "role": "clemency (kegyelem) — decides the pardon",
+      "may_generate": false
+    },
+    "tex": {
+      "model": null,
+      "role": "slot held, function undecided",
+      "may_generate": true
+    },
+    "latex": {
+      "model": null,
+      "role": "slot held, function undecided",
+      "may_generate": true
+    },
+    "jotform": {
+      "model": "Jotform",
+      "role": "intake front-end",
+      "may_generate": true
+    },
+    "suno": {
+      "model": "Suno",
+      "role": "music",
+      "may_generate": true
+    },
+    "video": {
+      "model": "Runway + free-tier AI-video services",
+      "role": "video, under Suno",
+      "may_generate": true
+    }
+  },
+  "excluded": [],
+  "wiring": "every infra → {bloomfield, claude, suno}; hubs chain in the order given"
+}
